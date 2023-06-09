@@ -1,0 +1,163 @@
+#page .w3 { line-height: 1.1 }
+#page h1 { margin-bottom: 1.5rem }
+#page h2.sub1 {
+	font-size: clamp(2.2rem, 2.8rem, 10vw);
+	margin-bottom: 2rem
+}
+.bgLight {
+	background-color: #f2f2f2;
+	border: 1px ridge #ccc
+}
+ol,
+section ul { margin-top: 15px }
+ol,
+section ul { margin-bottom: 15px }
+
+.howNum {
+	color: rgba(0 0 0 / 3%)
+}
+
+.sub1.m3,
+#page { margin-bottom: 3rem }
+
+#references { margin-top: 3rem }
+
+section ul,
+section ol { margin-left: 20px }
+
+section li { margin-bottom: 8px }
+
+#references .w3 {
+	font-size: 1.5rem;
+	margin-bottom: 8px
+}
+
+figcaption {
+	padding: 1.5rem;
+}
+#buttons,
+#about .btn { margin-top: 1.5rem }
+
+main p a:not(.btn):hover,
+main li a:hover,
+footer p a:hover,
+#home h1 a.blue:hover {
+	text-decoration: underline;
+}
+#about {
+	max-width: 1440px
+}
+
+@media screen and (min-width:1251px), (min-height:761px){
+	#page h1 { font-size: 3.5rem }
+	#page .sub2 { font-size: 2rem }
+}
+
+@media screen and (max-width:1250px), (max-height:760px){
+	#page h1 { font-size: clamp(2.4rem, 3rem, 10vw) }
+	#page .sub2 { font-size: 1.6rem }
+	#about .txt { padding-top: 3rem }
+}
+
+@media screen and (max-width:1250px) and (min-width:760px){
+	#about .txt { max-width: 700px }
+}
+
+@media screen and (min-width:1000px) and (min-height:650px){
+	#about {
+		height: calc(100vh - 4rem);
+		width: calc(100vw - 4rem);
+		margin: 2rem;
+		overflow: hidden;
+		display: grid;
+		grid-template-columns: 1fr 1fr
+	}
+	#about .txt {
+		padding: 0 2rem;
+		height: calc(100vh - 4rem)
+	}
+	#about .content { max-width:650px }
+	#about,
+	#about .txt { min-height: 650px }
+	#about img { object-position: center }
+}
+
+@media screen and (max-width:999px), (max-height:649px){
+	#about .img { height: 260px }
+	#about img { object-position: 25% }
+	#about .img.left img { object-position: left }
+	#about .img.right img { object-position: right }
+	#about .img.p30 img { object-position: 30% }
+	#about h1,
+	#about p:last-child { text-align: center }
+}
+
+@media screen and (min-width:1000px){
+	.howGrid {
+		grid-template-columns: repeat(3, 1fr);
+		grid-gap: 2rem
+	}
+	.howNum {
+		top: -90px;
+		left: -1.5rem;
+		font-size: 12rem
+	}
+}
+
+@media screen and (max-width:1000px){
+	.how + .how { margin-top:1.5rem }
+	.howNum {
+		top: -30px;
+		right: -.5rem;
+		font-size: 5rem
+	}
+}
+
+@media screen and (min-width:761px){
+	#references {
+		display: grid;
+		grid-gap: 2.5rem
+	}
+	#references figcaption {
+		bottom: -1.5rem;
+		right: -1.5rem
+	}
+}
+
+@media screen and (min-width:1400px){
+	#references { grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)) }
+	.fluid { max-width: 1400px }
+}
+
+@media screen and (max-width:1400px) and (min-width:1000px){
+	#references { grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr)) }
+	.fluid { max-width: 900px }
+}
+
+@media screen and (max-width:1000px) and (min-width:760px){
+	#references { grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)) }
+	.fluid { max-width: 630px }
+}
+
+@media screen and (max-width:760px){
+	#references a {
+		max-width: 400px
+	}
+	#references a + a { margin-top: 1.5rem }
+	#references figcaption {
+		bottom: -1rem;
+		right: -1rem;
+	}
+	#about .txt {
+		max-width: calc(100vw - 4rem)
+	}
+}
+
+@media screen and (min-width:350px){
+	#references figcaption {
+		position: absolute;
+		width: 285px;
+		box-shadow: 2px 2px 5px 0 rgba(0 0 0 / 30%);
+		border-radius: 10px
+	}
+}
